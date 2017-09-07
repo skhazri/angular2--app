@@ -1,0 +1,59 @@
+<div class="thumbnail">
+  <img src="./assets/images/{{house.image}}.jpg" alt="">
+  <h3> {{house.type}} </h3>
+  {{house.showDetails}}
+
+<div class="caption">
+<div *ngIf="!house.showDetails">
+  <h4>
+    <span class="label label-primary">
+      {{ house.type }}
+    </span>
+  </h4>
+  <h3>
+    <i class="glyphicon glyphicon-tag"></i>
+      {{ house.price | currency:'USD':true }}
+  </h3>
+  <h4>
+    <i class="glyphicon glyphicon-home"></i>
+      {{ house.address }}
+  </h4>
+
+  <hr>
+
+  <button
+    class="btn btn-sm btn-success"
+    *ngIf="!house.showDetails"
+    (click)="house.showDetails = !house.showDetails">
+    Details
+  </button>
+
+</div>
+
+<div *ngIf="house.showDetails">
+  <div class="details">
+    <h4>
+      <span class="label label-primary">
+        Beds: {{ house.bedrooms }}
+      </span>
+      <span class="label label-primary">
+        Baths: {{ house.bathrooms }}
+      </span>
+      <span class="label label-primary">
+        SqFt: {{ house.area }}
+      </span>
+    </h4>
+
+    <p>{{ house.description }}</p>
+
+    <hr>
+
+    <button
+      class="btn btn-sm btn-danger"
+      (click)="house.showDetails = !house.showDetails">
+      Close
+    </button>
+
+  </div>
+</div>
+</div>
