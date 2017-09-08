@@ -10,14 +10,15 @@ import { HousesService } from './services/houses.service';
 import { AddListingFormComponent } from './add-listing-form/add-listing-form.component';
 import { UtilService } from './services/util.service';
 import { SortByPipe } from './pipes/sort-by.pipe';
-
+import { UserComponent } from './user/user.component';
 @NgModule({
   declarations: [
     AppComponent,
     HouseListingComponent,
     HouseCardComponent,
     AddListingFormComponent,
-    SortByPipe
+    SortByPipe,
+    UserComponent
   ],
   imports: [
     BrowserModule,

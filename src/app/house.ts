@@ -2,8 +2,8 @@ export interface House {
 id: number,
 type: string,
 price: number,
-description: String,
+description: string,
 bedrooms: number,
 bathrooms:number
-image: String
+image: string
 }

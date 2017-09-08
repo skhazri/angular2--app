@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <div class="users-list" *ngIf="users">
+    <div class="" *ngFor="let user of users"
+    (click)="selectUser(user)"
+    [class.active]= "user === activeUser">
+    {{user.name}} {{user.age}}
+  </div>
+</div>
+<h1>active User</h1>
+<div *ngIf="activeUser">
+  {{activeUser.name}} {{activeUser.age}}
+  <input type="text"  [(ngModel)]="activeUser.age">
+
+</div>
+<div class="" *ngIf="!activeUser">
+  no active users
+</div>
+</body>
+</html>

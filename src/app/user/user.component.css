@@ -1,0 +1,6 @@
+.users-list {
+  cursor: pointer
+}
+.active {
+  background-color: cyan;
+}
